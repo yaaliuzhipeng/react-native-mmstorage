@@ -5,31 +5,29 @@ import MMStorage from 'react-native-mmstorage';
 
 export default function App() {
 
-	useEffect(() =>{
+	useEffect(() => {
 		MMStorage.initMMStorage([]);
-	},[])
+	}, [])
 
 	useEffect(() => {
 		let user = {
-			id: Math.floor(Math.random()*1000000),
-			name: 'lzp',
-			age: 25,
-			sex: 'boy'
+			id: Math.floor(Math.random() * 1000000),
+			name: 'lily',
+			age: 23,
+			sex: 1
 		}
-		MMStorage.setStringifyValue("user",user);
+		MMStorage.setStringifyValue("user", user);
 		MMStorage.getParsedValue("user").then((value) => {
-			console.log("user: ",value);
+			console.log("user: ", value);
 		})
 		MMStorage.hasKey('user').then(rs => {
-			console.log('before delete ',rs);
+			console.log('before delete ', rs);
 		})
 		MMStorage.delAllValue();
-		setTimeout(() => {
-			MMStorage.hasKey('user').then(rs => {
-				console.log('after delete ',rs);
-			})
-		}, 100);
-	},[])
+		MMStorage.hasKey('user').then(rs => {
+			console.log('after delete ', rs);
+		})
+	}, [])
 
 	return (
 		<View></View>
