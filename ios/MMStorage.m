@@ -117,6 +117,16 @@ RCT_EXPORT_METHOD(getValue:
         }
     }
 }
+RCT_EXPORT_METHOD(getStringValue:
+                  (NSString *)id
+                  key:(NSString *) key
+                  callback: (RCTResponseSenderBlock)callback)
+{
+    MMKV* ins = [self getInstance:id];
+    if(ins != nil) {
+        callback(@[[ins getStringForKey:key]]);
+    }
+}
 RCT_EXPORT_METHOD(hasKey: (NSString *)id
                   key:(NSString *) key
                   callback:(RCTResponseSenderBlock)callback)

@@ -128,6 +128,13 @@ public class MMStorageModule extends ReactContextBaseJavaModule {
             }
         }
     }
+    @ReactMethod
+    public void getStringValue(String id,String key,Callback callback) {
+        MMKV ins = getInstance(id);
+        if(ins != null) {
+            callback.invoke(ins.decodeString(key));
+        }
+    }
 
     @ReactMethod
     public void hasKey(String id,String key,Callback callback){

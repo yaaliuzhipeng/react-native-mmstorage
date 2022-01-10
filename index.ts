@@ -40,6 +40,13 @@ function setNumberValue(key:string, value:number,preciseType:PreciseTypeNumber,i
 function setStringValue(key:string, value:string,id?:string){
     RNMMStorage.setStringValue(id ?? "",key,value)
 }
+function getStringValue(key:string,id?:string){
+    return new Promise(function(resolve,reject) {
+        RNMMStorage.getStringValue(id ?? "",key,(v) => {
+            resolve(v);
+        })
+    })
+}
 function _getValue(key:string,type:PreciseType,id?:string){
     return new Promise(function(resolve,reject) {
         RNMMStorage.getValue(id ?? "", key, typeMap(type), (v) => {
@@ -47,6 +54,7 @@ function _getValue(key:string,type:PreciseType,id?:string){
         })
     })
 }
+
 function hasKey(key:string,id?:string){
     return new Promise(function(resolve,reject) {
         RNMMStorage.hasKey(id ?? "",key,(v) => {
@@ -116,6 +124,7 @@ const MMStorage = {
     getValue,
     setValue,
     setStringifyValue,
-    getParsedValue
+    getParsedValue,
+    getStringValue,
 }
 export default MMStorage;
