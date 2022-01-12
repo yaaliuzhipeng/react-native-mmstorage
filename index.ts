@@ -35,7 +35,7 @@ function setBoolValue(key:string, value:boolean,id?:string){
     RNMMStorage.setBoolValue(id ?? "",key,value);
 }
 function setNumberValue(key:string, value:number,preciseType:PreciseTypeNumber,id?:string){
-    RNMMStorage.setNumberValue(id ?? "",key,value,preciseType)
+    RNMMStorage.setNumberValue(id ?? "",key,value,typeMap(preciseType))
 }
 function setStringValue(key:string, value:string,id?:string){
     RNMMStorage.setStringValue(id ?? "",key,value)
