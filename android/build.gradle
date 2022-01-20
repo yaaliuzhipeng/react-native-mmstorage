@@ -52,6 +52,7 @@ repositories {
 dependencies {
     //noinspection GradleDynamicVersion
     implementation 'com.facebook.react:react-native:+'  // From node_modules
+    implementation 'com.tencent:mmkv:1.2.11'
 }
 
 afterEvaluate { project ->
