@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
                   react-native-mmstorage
                    DESC
-  s.homepage     = "https://github.com/github_account/react-native-mmstorage"
+  s.homepage     = "https://github.com/yaaliuzhipeng/react-native-mmstorage"
   # brief license entry:
   s.license      = "MIT"
   # optional - use expanded license entry instead:
