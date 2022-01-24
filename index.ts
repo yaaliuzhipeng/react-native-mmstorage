@@ -9,8 +9,8 @@ const INT:number = 2;
 const BOOLEAN:number = 3;
 const STRING:number = 4;
 
-type PreciseTypeNumber = 'DOUBLE' | 'FLOAT' | 'INT'
-type PreciseType = PreciseTypeNumber | 'BOOLEAN' | 'STRING';
+export type PreciseTypeNumber = 'DOUBLE' | 'FLOAT' | 'INT'
+export type PreciseType = PreciseTypeNumber | 'BOOLEAN' | 'STRING';
 function typeMap(type: PreciseType) {
     switch (type) {
         case 'DOUBLE':
