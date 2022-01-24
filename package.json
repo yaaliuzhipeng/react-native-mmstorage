@@ -1,7 +1,7 @@
 {
   "name": "react-native-mmstorage",
   "title": "React Native MMStorage",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "key value storage based on mmap",
   "main": "index.ts",
   "typings": "./types.d.ts",
